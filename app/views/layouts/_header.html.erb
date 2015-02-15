@@ -5,11 +5,13 @@
     <% end %>
   </div>
   <div class="large-4 columns">
-    <% if current_user %>
-      <%= link_to "Log out", log_out_path, :class => 'button' %>
-    <% else %>
-      <%= link_to "Sign up", sign_up_path, :class => 'button' %>
-      <%= link_to "Log in", log_in_path, :class => 'button' %>
-    <% end %>
+    <ul class="right button-group">
+      <% if current_user %>
+        <li><%= link_to "Log out", log_out_path, :class => 'tiny button' %></li>
+      <% else %>
+        <li><%= link_to "Sign up", sign_up_path, :class => 'tiny button' %></li>
+        <li><%= link_to "Log in", log_in_path, :class => 'tiny button' %></li>
+      <% end %>
+    </ul>
   </div>
 </div>
