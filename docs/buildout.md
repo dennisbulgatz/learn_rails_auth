@@ -12,4 +12,19 @@ Gemfile
 
 ```ruby
 gem "bcrypt-ruby", :require => "bcrypt"
+gem 'foundation-rails'
+```
+
+For CSS
+
+```bash
+rails g foundation:install
+```
+
+[Foundation for Rails](http://foundation.zurb.com/docs/applications.html)
+
+If you're planning on using Sass, then you'll want to rename `application.css` to `application.scss`. That file should then look like:
+
+```css
+@import "foundation_and_overrides"; /* Add imports of custom sass/scss files here */
 ```
