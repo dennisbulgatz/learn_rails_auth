@@ -1,5 +1,11 @@
 <h1>Sign Up</h1>
 
+<style>
+.field_with_errors input {
+	border: 2px solid red;
+}
+</style>
+
 <%= form_for @user do |f| %>
   <% if @user.errors.any? %>
     <div class="error_messages">
