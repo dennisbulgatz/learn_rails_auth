@@ -1,0 +1,10 @@
+<h1>Users</h1>
+
+<table>
+<% @users.each do |user| %>
+	<tr>
+		<td><%= user.email %></td>
+		<td><%= user.last_logged_in ? user.last_logged_in.strftime("%b %d, %Y %H:%M:%S") : 'User has not logged in' %></td>
+	</tr>
+<% end %>
+</table>
