@@ -1,19 +1,31 @@
-<h1>Sign Up</h1>
-<%= form_for @user do |f| %>
- <%= render "shared/error_messages", :target => @user %>
-  <div class="row">
-    <%= f.label :email %>
-    <%= f.text_field :email, :placeholder => 'user@domain.com' %>
+<div class="row">
+  <div class="small-6 small-centered columns">
+    <h1>Sign Up</h1>
+    <%= form_for @user do |f| %>
+     <%= render "shared/error_messages", :target => @user %>
+      <div class="row">
+        <div class="large-12 columns">
+          <%= f.label :email %>
+          <%= f.text_field :email, :placeholder => 'user@domain.com' %>
+        </div>
+      </div>
+      <div class="row">
+        <div class="large-12 columns">
+          <%= f.label :password %>
+          <%= f.password_field :password %>
+        </div>
+      </div>
+      <div class="row">
+        <div class="large-12 columns">
+          <%= f.label :password_confirmation %>
+          <%= f.password_field :password_confirmation %>
+        </div>
+      </div>
+      <div class="row">
+        <div class="large-12 columns">
+          <%= f.submit :class => 'button' %>
+        </div>
+      </div>
+    <% end %>
   </div>
-  <div class="row">
-    <%= f.label :password %>
-    <%= f.password_field :password %>
-  </div>
-  <div class="row">
-    <%= f.label :password_confirmation %>
-    <%= f.password_field :password_confirmation %>
-  </div>
-  <div class="row">
-    <%= f.submit :class => 'button' %>
-  </div>
-<% end %>
+</div>
