@@ -22,7 +22,12 @@
 
 <p>
   <strong>Created by:</strong>
-  <%= @term.created_by.email %>
+  <%= @term.created_by ? @term.created_by.email : nil %>
+</p>
+
+<p>
+  <strong>Updated by:</strong>
+  <%= @term.updated_by ? @term.updated_by.email : nil  %>
 </p>
 
 <%= link_to 'Edit', edit_term_path(@term) %> |
